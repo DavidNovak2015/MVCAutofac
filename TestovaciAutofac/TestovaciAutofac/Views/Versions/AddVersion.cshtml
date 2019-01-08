@@ -1,0 +1,37 @@
+﻿@model TestovaciAutofac.Models.VersionsViewModel
+@{
+    ViewBag.Title = "Vytvoření nových verzí";
+}
+
+<h2>Vytvoření nových verzí</h2>
+
+@using (Html.BeginForm("AddVersion", "Versions",FormMethod.Post,Model))
+{
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.VersionEntity.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.VersionEntity.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.VersionEntity.Name, "", new { @class = "text-danger" })
+            </div>
+        </div><br />
+
+    </div>
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="založit" class="btn btn-default" />
+                @Html.ActionLink("Zrušit", "GetTodayVersions", "Versions", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+
+
+}
+

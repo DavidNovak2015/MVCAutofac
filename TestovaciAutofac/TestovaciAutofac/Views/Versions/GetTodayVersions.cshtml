@@ -1,0 +1,26 @@
+﻿@model TestovaciAutofac.Models.VersionsViewModel
+@{
+    ViewBag.Title = "Dnešní verze";
+}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.VersionEntity.Name, new { @class = "control-label col-md-2" })
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model.TodaysVersions)
+    {
+        <tbody>
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+            </tr>
+        </tbody>
+    }
+
+</table>

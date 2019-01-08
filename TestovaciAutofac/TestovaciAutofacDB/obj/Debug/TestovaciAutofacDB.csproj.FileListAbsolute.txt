@@ -1,0 +1,15 @@
+C:\Users\David\Desktop\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.dll
+C:\Users\David\Desktop\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.pdb
+C:\Users\David\Desktop\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.dll
+C:\Users\David\Desktop\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.pdb
+D:\RODINA-zalohaDavidMiriamNoe\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.dll
+D:\RODINA-zalohaDavidMiriamNoe\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.pdb
+D:\RODINA-zalohaDavidMiriamNoe\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.dll
+D:\RODINA-zalohaDavidMiriamNoe\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.pdb
+D:\RODINA-zalohaDavidMiriamNoe\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.csprojResolveAssemblyReference.cache
+\\DAVIDMIRIAMNOE\Users\David\Desktop\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.dll
+\\DAVIDMIRIAMNOE\Users\David\Desktop\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\bin\Debug\TestovaciAutofacDB.pdb
+\\DAVIDMIRIAMNOE\Users\David\Desktop\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.dll
+\\DAVIDMIRIAMNOE\Users\David\Desktop\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.pdb
+\\DAVIDMIRIAMNOE\Users\David\Desktop\David\Programovani\MVCProjects\TestovaciAutofac\TestovaciAutofacDB\obj\Debug\TestovaciAutofacDB.csprojResolveAssemblyReference.cache
