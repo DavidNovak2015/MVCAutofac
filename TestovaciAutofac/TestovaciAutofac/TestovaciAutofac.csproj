@@ -250,6 +250,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Versions\AddVersion.cshtml" />
     <Content Include="Views\SelectionMask\GetSelectionMask.cshtml" />
+    <Content Include="Views\SelectionMask\FindSelectedVersion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

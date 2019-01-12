@@ -32,7 +32,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamReader reader = new StreamReader($"{path1}/verze"))
+                using (StreamReader reader = new StreamReader($"{path}/verze"))
                 {
                     return (List<VersionEntityDB>)serializer.Deserialize(reader);
                 }
@@ -53,7 +53,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamWriter streamWriter = new StreamWriter($" {path1}/verze"))
+                using (StreamWriter streamWriter = new StreamWriter($" {path}/verze"))
                 {
                     serializer.Serialize(streamWriter, savedVersions );
                 }
@@ -69,6 +69,18 @@ namespace TestovaciAutofacDB.DbRepositories
         public List<VersionEntityDB> GetAllVersions()
         {
             return GetTodaysVersions();
+        }
+
+        //vrati pozadovanou verzi
+        public VersionEntityDB GetSelectedVersion (VersionEntityDB selectedVersion)
+        {
+            VersionEntityDB foundVersion = new VersionEntityDB();
+
+            List<VersionEntityDB> allVersions = GetAllVersions();
+
+            foundVersion = allVersions.Where(x => x.Name == selectedVersion.Name)
+                                      .FirstOrDefault();
+            return foundVersion;
         }
     }
 }

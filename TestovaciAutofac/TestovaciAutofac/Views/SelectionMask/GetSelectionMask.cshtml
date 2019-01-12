@@ -6,7 +6,7 @@
 
 <h2>Vyhledávací maska</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("FindSelectedVersion", "SelectionMask",FormMethod.Post,Model.SelectedVersion))
 {
     Html.AntiForgeryToken();
     Html.ValidationSummary();
