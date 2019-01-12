@@ -43,7 +43,15 @@ namespace TestovaciAutofac.Models
                         AllVersions.Add(new SelectListItem { Text = version.Name, Value = version.Name });
                     }
             }
+        }
 
+        //vrati pozadovanou verzi
+        public void GetSelectedVersion (VersionEntity selectedVersion)
+        {
+            VersionEntityDB selectedVersionDB = new VersionEntityDB(selectedVersion.Name);
+            VersionEntityDB foundVersionDB = versionsRepository.GetSelectedVersion(selectedVersionDB);
+
+            SelectedVersion = new VersionEntity(foundVersionDB.Name);
         }
     }
 }

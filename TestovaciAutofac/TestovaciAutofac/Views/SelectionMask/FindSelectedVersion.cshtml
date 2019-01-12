@@ -1,0 +1,20 @@
+﻿@model TestovaciAutofac.Models.SelectionMaskViewModel
+
+@{
+    ViewBag.Title = "Nalezená verze";
+}
+
+<h2>Nalezená verze</h2>
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SelectedVersion.Name, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.SelectedVersion, new SelectList(Model.AllVersions, "Value", "Text"))
+            @Html.ValidationMessageFor(model => model.SelectedVersion)
+        </div>
+        <br /><br />
+    </div>
+</div>
+

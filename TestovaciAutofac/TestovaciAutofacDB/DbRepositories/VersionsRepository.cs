@@ -14,9 +14,8 @@ namespace TestovaciAutofacDB.DbRepositories
     public class VersionsRepository:IversionsRepository
     {
         private const string path = "D:/RODINA-zalohaDavidMiriamNoe/David/Programovani/MVCProjects/TestovaciAutofac/TestovaciAutofac/DbFiles";
-        private const string path1 = "C:/Users/David/Desktop/TestovaciAutofac/TestovaciAutofac/TestovaciAutofac/DbFiles";
+        private const string path1 = "C:/Users/David/Desktop/David/Programovani/MVCProjects/TestovaciAutofac/TestovaciAutofac/DbFiles";
         private string result = "";
-        private string versionDepositoryName = "verze.txt";
         private List<VersionEntityDB> error = new List<VersionEntityDB>();
 
         //vlozi data do Listu za ucelem ulozeni do souboru
@@ -33,7 +32,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamReader reader = new StreamReader($"{path1}/{versionDepositoryName}"))
+                using (StreamReader reader = new StreamReader($"{path}/verze"))
                 {
                     return (List<VersionEntityDB>)serializer.Deserialize(reader);
                 }
@@ -54,7 +53,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamWriter streamWriter = new StreamWriter($" {path1}/{versionDepositoryName}"))
+                using (StreamWriter streamWriter = new StreamWriter($" {path}/verze"))
                 {
                     serializer.Serialize(streamWriter, savedVersions );
                 }
@@ -70,6 +69,18 @@ namespace TestovaciAutofacDB.DbRepositories
         public List<VersionEntityDB> GetAllVersions()
         {
             return GetTodaysVersions();
+        }
+
+        //vrati pozadovanou verzi
+        public VersionEntityDB GetSelectedVersion (VersionEntityDB selectedVersion)
+        {
+            VersionEntityDB foundVersion = new VersionEntityDB();
+
+            List<VersionEntityDB> allVersions = GetAllVersions();
+
+            foundVersion = allVersions.Where(x => x.Name == selectedVersion.Name)
+                                      .FirstOrDefault();
+            return foundVersion;
         }
     }
 }

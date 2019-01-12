@@ -17,5 +17,8 @@ namespace TestovaciAutofacDB.Interfaces
 
         //vrati vsechny verze
         List<VersionEntityDB> GetAllVersions();
+
+        //vrati pozadovanou verzi
+        VersionEntityDB GetSelectedVersion(VersionEntityDB selectedVersion);
     }
 }
