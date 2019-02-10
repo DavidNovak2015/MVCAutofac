@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TestovaciAutofac.Interfaces;
-using TestovaciAutofac.Models;
 using TestovaciAutofac.Models.Entities;
 
 namespace TestovaciAutofac.Controllers
 {
     public class SelectionMaskController : Controller
     {
+        // Autofac
         private readonly IselectionMaskViewModel selectionMaskViewModel;
 
+        // Autofac
         public SelectionMaskController(IselectionMaskViewModel iSelectionMaskViewModel)
         {
             selectionMaskViewModel = iSelectionMaskViewModel;

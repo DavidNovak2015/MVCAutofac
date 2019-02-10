@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TestovaciAutofac.Interfaces;
 using TestovaciAutofac.Models;
-using TestovaciAutofac.Models.Entities;
 
 namespace TestovaciAutofac.Controllers
 {
@@ -20,22 +15,26 @@ namespace TestovaciAutofac.Controllers
             versionsViewModel = iVersionsViewModel;
         }
 
+        // vrati dnesni verze
         public ActionResult GetTodayVersions()
         {
             versionsViewModel.GetTodaysVersions();
             return View(versionsViewModel);
         }
 
+        // zobrazeni prazdneho formulare
         public ActionResult AddVersion()
         {
             versionsViewModel.AddForm();
             return View(versionsViewModel);
         }
 
+        // ulozeni nove verze 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddVersion(VersionsViewModel versionToDB)
         {
-            TempData["result"]=versionsViewModel.AddVersion(versionToDB.VersionEntity);
+            TempData["result"]=versionsViewModel.AddVersion(versionToDB.Version);
             return RedirectToAction("GetTodayVersions");
         }
     }

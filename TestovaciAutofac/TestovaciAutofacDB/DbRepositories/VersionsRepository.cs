@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using TestovaciAutofacDB.DbEntities;
 using TestovaciAutofacDB.Interfaces;
@@ -13,9 +11,9 @@ namespace TestovaciAutofacDB.DbRepositories
 {
     public class VersionsRepository:IversionsRepository
     {
-        private const string path = "D:/RODINA-zalohaDavidMiriamNoe/David/Programovani/MVCProjects/TestovaciAutofac/TestovaciAutofac/DbFiles";
-        private const string path1 = "C:/Users/David/Desktop/David/Programovani/MVCProjects/TestovaciAutofac/TestovaciAutofac/DbFiles";
+        private const string path = "zde zadat celou cestu az po slozku DbFiles v této solution";
         private string result = "";
+        private const string fileName = "zde zadat nazev souboru ve slozce  DbFiles (pod Controllery) vcetne pripony";
         private List<VersionEntityDB> error = new List<VersionEntityDB>();
 
         //vlozi data do Listu za ucelem ulozeni do souboru
@@ -32,7 +30,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamReader reader = new StreamReader($"{path}/verze"))
+                using (StreamReader reader = new StreamReader($"{path}/{fileName}"))
                 {
                     return (List<VersionEntityDB>)serializer.Deserialize(reader);
                 }
@@ -53,7 +51,7 @@ namespace TestovaciAutofacDB.DbRepositories
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<VersionEntityDB>));
-                using (StreamWriter streamWriter = new StreamWriter($" {path}/verze"))
+                using (StreamWriter streamWriter = new StreamWriter($"{path}/{fileName}"))
                 {
                     serializer.Serialize(streamWriter, savedVersions );
                 }

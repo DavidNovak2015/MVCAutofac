@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using TestovaciAutofac.Models.Entities;
 using TestovaciAutofacDB.Interfaces;
 using TestovaciAutofacDB.DbEntities;
@@ -15,11 +13,12 @@ namespace TestovaciAutofac.Models
         public List<VersionEntity> TodaysVersions { get; private set; }
 
         // pristup k objektu verze
-        public VersionEntity VersionEntity { get; set; }
+        public VersionEntity Version { get; set; }
 
         // Autofac
         private readonly IversionsRepository versionsRepository;
 
+        // Autofac
         public VersionsViewModel(IversionsRepository iVersionsRepository)
         {
             versionsRepository = iVersionsRepository;
@@ -41,7 +40,7 @@ namespace TestovaciAutofac.Models
         // zobrazeni prazdneho formulare
         public void AddForm()
         {
-            VersionEntity = new VersionEntity();
+            Version = new VersionEntity();
         }
 
         // ulozeni nove verze 

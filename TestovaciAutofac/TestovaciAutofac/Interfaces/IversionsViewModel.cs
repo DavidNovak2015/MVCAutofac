@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestovaciAutofac.Models.Entities;
+﻿using TestovaciAutofac.Models.Entities;
 
 namespace TestovaciAutofac.Interfaces
 {
     public interface IversionsViewModel
     {
+        // vrati dnesni verze
         void GetTodaysVersions();
+
+        // zobrazeni prazdneho formulare
         void AddForm();
+
+        // ulozeni nove verze 
         string AddVersion(VersionEntity versionToDB);
     }
 
